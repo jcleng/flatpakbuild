@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       filurl:
-        description: '仓库地址'
+        description: '仓库: {owner}/{repo}'
         required: true
         default: ''
       ref:
