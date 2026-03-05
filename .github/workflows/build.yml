@@ -31,9 +31,10 @@ jobs:
         repository: ${{ github.event.inputs.filurl }}
         ref: ${{ github.event.inputs.ref }}
 
-    - name: see json file
+    - name: see config file
       run: |
         for f in ./*.json; do echo "📄=== $f ==="; cat "$f"; done
+        for f in ./*.yml; do echo "📄=== $f ==="; cat "$f"; done
 
     - name: flatpak action
       uses: flatpak/flatpak-github-actions/flatpak-builder@v6
